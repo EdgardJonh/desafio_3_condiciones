@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <style>
+        .card img {
+            width: 100%;
+            border-radius: 5%;
+        }
+        .card{
+            width: 50%;
+          text-align: center;
+        }
+        .contenedor{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="card">
+            <h1>Ingresa el password </h1>
+            <img class="imagen" src="assets/img/nintendo_switch_logo_positivo.jpg" onclick="
+            let img = document.querySelector('.imagen')
+            if (img.style.border == '') {
+                img.style.border = 'solid 2px red'
+            } else {
+                img.style.border = ''
+            }
+           
+            " alt="">
+            <select name="" id="n1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select name="" id="n2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select name="" id="n3">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <p class="mensaje"></p>
+            <button  class="btn" onclick="
+                let n1 = document.querySelector('#n1').value
+                let n2 = document.querySelector('#n2').value
+                let n3 = document.querySelector('#n3').value
+                let mensaje = document.querySelector('.mensaje')
+                console.log(window)
+                console.log(n1)
+                 if (n1 == 9 && n2 == 1 && n3 == 1 ) {
+                     window.location.href = 'stikers.html'
+                 } else {
+                    mensaje.innerHTML = 'Clave Incorrecta!'
+                    mensaje.style.color = 'red'
+                 }
+                
+                " type="button">Ingresar</button>
+        </div>
+    </div>
+   
+<script>
+    
+</script>    
+</body>
+
+</html>
